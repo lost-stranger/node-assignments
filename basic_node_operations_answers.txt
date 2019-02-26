@@ -1,6 +1,6 @@
 Questions
 
-Q. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+Q 1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
 
 > Sort: I ran sort on Command Line on a file called Oceans.txt which listed the five oceans in the world. The command took the data from the txt file, 
 converted it into an array by \n seperator, sorted it by the first alphabet in the element in ascending order, converted it back into string by \n seperator and returned it on Command Line.
@@ -8,10 +8,34 @@ I have implemented this on Command.js
 
 > wc: Same as above, I ran this on Oceans.txt, the command returns four elements in string format:
 1. new line items: the wc command converted data to array by using \n seperator then couted the number of elements
-1. number of words: converted the data to array by spliting by \n, then splitting each element by ' ', then calculating the length of the full array giving word count
+2. number of words: converted the data to array by spliting by \n, then splitting each element by ' ', then calculating the length of the full array giving word count
+3. byte size: to obtain byte size, I used the fs library function statSync
 
-> uniq: 
+Finally, I add all the above elements in an array along with the file namse and converted back to string
 
+> uniq: I sorted the elements in Oceans.txt and ran uniq. The function is similar to the cat function structure, except for the additioanl embedded function code, that uses an 
+iterative for loop to look for duplicates, removing them and adding the unique  elements into a new array. The array is returned as a string.
 
+Q 2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
 
-Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+> I ran 'sort Oceans.txt | uniq'. Oceans txt had the unsorted names of the ocean. Sort took the string, converted in an array, sorted the array and returned the sorted array as a string.
+The resultant string was piped to uniq as an input, which then converted into an array, removed the duplicate elements, converted the array back to string and returned it.
+
+Q. 6. 
+
+var foo = "Today is the best day of my life";
+
+function reverseString(foo) {
+  
+  var newArr = foo.split(' ');
+  
+  var tmp = [];
+      
+  newArr.forEach((x) => 
+   tmp.push(x.split('').reverse().join('')));
+  
+  return tmp.join(' ');
+  
+}
+
+console.log(reverseString(foo));
