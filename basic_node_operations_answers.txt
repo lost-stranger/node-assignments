@@ -1,0 +1,17 @@
+Questions
+
+Q. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+> Sort: I ran sort on Command Line on a file called Oceans.txt which listed the five oceans in the world. The command took the data from the txt file, 
+converted it into an array by \n seperator, sorted it by the first alphabet in the element in ascending order, converted it back into string by \n seperator and returned it on Command Line.
+I have implemented this on Command.js
+
+> wc: Same as above, I ran this on Oceans.txt, the command returns four elements in string format:
+1. new line items: the wc command converted data to array by using \n seperator then couted the number of elements
+1. number of words: converted the data to array by spliting by \n, then splitting each element by ' ', then calculating the length of the full array giving word count
+
+> uniq: 
+
+
+
+Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
